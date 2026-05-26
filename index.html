@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lemonade Arts Foundation — St. Petersburg, Florida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F7F1E8;
+    --gold: #E8B84B;
+    --gold-deep: #C9922A;
+    --ink: #1A1610;
+    --ink-soft: #3D3528;
+    --terra: #C4581F;
+    --sage: #6B7B5E;
+    --warm-white: #FDFAF4;
+    --mid: #8C7A5E;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+  html { scroll-behavior: smooth; }
+  img { max-width: 100%; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3rem;
+    background: rgba(247,241,232,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(232,184,75,0.25);
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-logo span {
+    color: var(--gold-deep);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--ink-soft);
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold-deep); }
+
+  .nav-donate {
+    background: var(--gold) !important;
+    color: var(--ink) !important;
+    padding: 0.55rem 1.4rem !important;
+    letter-spacing: 0.12em !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-donate:hover { background: var(--gold-deep) !important; color: #fff !important; }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 3rem 6rem 3rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terra);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--terra);
+  }
+
+  .hero-h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.0;
+    color: var(--ink);
+    margin-bottom: 2rem;
+  }
+
+  .hero-h1 em {
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    max-width: 38ch;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 0.9rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .btn-primary:hover { background: var(--gold-deep); }
+
+  .btn-outline {
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    padding: 0.9rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .btn-outline:hover {
+    background: var(--ink);
+    color: var(--cream);
+  }
+
+  .hero-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .hero-visual img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-circle-bg {
+    position: absolute;
+    width: 75%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, var(--gold) 0%, var(--gold-deep) 45%, var(--terra) 100%);
+    opacity: 0.9;
+    animation: pulse-slow 6s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-slow {
+    from { transform: scale(0.97) rotate(-2deg); }
+    to { transform: scale(1.03) rotate(2deg); }
+  }
+
+  .hero-visual-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--ink);
+  }
+
+  .hero-lemon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 0.9;
+    opacity: 0.18;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cream);
+    user-select: none;
+    white-space: nowrap;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-stat-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    border-top: 1px solid rgba(26,22,16,0.1);
+  }
+
+  .hero-stat {
+    flex: 1;
+    padding: 1.5rem 2rem;
+    border-right: 1px solid rgba(26,22,16,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .hero-stat:last-child { border-right: none; }
+
+  .hero-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold-deep);
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+  }
+
+  /* ── MARQUEE ── */
+  .marquee-wrap {
+    background: var(--ink);
+    padding: 0.9rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    animation: marquee 22s linear infinite;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .marquee-item {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    padding: 0 2.5rem;
+  }
+
+  .marquee-dot {
+    color: var(--terra);
+    padding: 0 0.5rem;
+    font-style: normal;
+  }
+
+  /* ── PROGRAMS ── */
+  #programs {
+    padding: 7rem 3rem;
+    background: var(--warm-white);
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid rgba(26,22,16,0.1);
+    padding-bottom: 1.5rem;
+  }
+
+  .section-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+
+  .programs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5px;
+    background: rgba(26,22,16,0.1);
+    border: 1.5px solid rgba(26,22,16,0.1);
+  }
+
+  .program-card {
+    background: var(--warm-white);
+    padding: 2.5rem;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .program-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+
+  .program-card:hover { background: var(--cream); }
+  .program-card:hover::after { width: 100%; }
+
+  .program-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(26,22,16,0.08);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .program-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .program-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  .program-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--terra);
+    margin-top: 1.25rem;
+    border: 1px solid var(--terra);
+    padding: 0.25rem 0.75rem;
+  }
+
+  /* ── ABOUT ── */
+  #about {
+    padding: 7rem 3rem;
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-left { position: relative; }
+
+  .about-quote-block {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 3.5rem;
+    position: relative;
+  }
+
+  .about-quote-block::before {
+    content: '\201C';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 8rem;
+    color: var(--gold);
+    position: absolute;
+    top: -1rem;
+    left: 2rem;
+    line-height: 1;
+    opacity: 0.6;
+  }
+
+  .about-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.55;
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-quote-attr {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 1.5rem;
+    font-style: normal;
+  }
+
+  .about-accent-box {
+    margin-top: 1.5px;
+    background: var(--gold);
+    padding: 1.5rem 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .about-accent-box span {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .about-right {}
+
+  .about-body {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin-bottom: 2rem;
+  }
+
+  .about-body strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .values-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(26,22,16,0.08);
+  }
+
+  .value-icon {
+    width: 2rem;
+    height: 2rem;
+    background: var(--gold);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .value-name {
+    font-weight: 500;
+    font-size: 0.88rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .value-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--mid);
+  }
+
+  /* ── VISION BAND ── */
+  .vision-band {
+    background: var(--terra);
+    padding: 5rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vision-band::before {
+    content: 'LAF';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(9rem, 32vw, 22rem);
+    font-weight: 700;
+    color: rgba(255,255,255,0.06);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+    letter-spacing: -0.04em;
+    z-index: 0;
+  }
+
+
+  .vision-orb,
+  .vision-orb-halo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+  .vision-orb {
+    width: min(640px, 75vw);
+    aspect-ratio: 1;
+    background:
+      radial-gradient(
+        circle at 38% 34%,
+        #fff5d1 0%,
+        var(--gold) 20%,
+        var(--gold-deep) 48%,
+        rgba(176, 86, 41, 0.55) 78%,
+        rgba(176, 86, 41, 0) 100%
+      );
+    filter: blur(0.5px) saturate(1.05);
+    animation: orb-breathe 8s ease-in-out infinite alternate;
+    z-index: 0;
+    mix-blend-mode: screen;
+  }
+  .vision-orb-halo {
+    width: min(820px, 95vw);
+    aspect-ratio: 1;
+    background:
+      radial-gradient(
+        circle,
+        rgba(232, 184, 75, 0.45) 0%,
+        rgba(232, 184, 75, 0.15) 35%,
+        transparent 70%
+      );
+    filter: blur(28px);
+    animation: orb-halo 11s ease-in-out infinite alternate;
+    z-index: 0;
+  }
+  @keyframes orb-breathe {
+    0%   { transform: translate(-50%, -50%) scale(0.93) rotate(-4deg); }
+    50%  { transform: translate(-49%, -51%) scale(1.00) rotate(0deg); }
+    100% { transform: translate(-51%, -49%) scale(1.07) rotate(4deg); }
+  }
+  @keyframes orb-halo {
+    0%   { opacity: 0.55; transform: translate(-50%, -50%) scale(0.88); }
+    100% { opacity: 1.00; transform: translate(-50%, -50%) scale(1.14); }
+  }
+
+  .vision-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(253,250,244,0.65);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .vision-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--warm-white);
+    max-width: 72ch;
+    margin: 0 auto 2.5rem;
+    line-height: 1.45;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ── DONATE ── */
+  #donate {
+    padding: 7rem 3rem;
+    background: var(--warm-white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .donate-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  .donate-left h2 em {
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+
+  .donate-left p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    margin-bottom: 2rem;
+  }
+
+  .donate-amounts {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  .donate-amt {
+    border: 1.5px solid rgba(26,22,16,0.2);
+    padding: 0.75rem 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    color: var(--ink);
+  }
+
+  .donate-amt:hover, .donate-amt.active {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .donate-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .donate-right {
+    background: var(--ink);
+    padding: 3rem;
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .donate-right::after {
+    content: '';
+    position: absolute;
+    bottom: -3rem;
+    right: -3rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 2rem solid rgba(232,184,75,0.15);
+  }
+
+  .donate-right-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    letter-spacing: 0.06em;
+  }
+
+  .impact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .impact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .impact-amt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--gold);
+    min-width: 4rem;
+    line-height: 1;
+  }
+
+  .impact-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: rgba(253,250,244,0.75);
+  }
+
+  /* ── APPLY BAND ── */
+  .apply-band {
+    background: var(--cream);
+    border-top: 1px solid rgba(26,22,16,0.1);
+    border-bottom: 1px solid rgba(26,22,16,0.1);
+    padding: 4rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .apply-text h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+
+  .apply-text p {
+    font-size: 0.9rem;
+    color: var(--mid);
+    max-width: 50ch;
+  }
+
+  .apply-band .btn-primary {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    padding: 7rem 3rem;
+    background: var(--ink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-left h2 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .contact-left p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: rgba(247,241,232,0.6);
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .contact-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .contact-info-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .contact-info-value {
+    font-size: 0.92rem;
+    color: rgba(247,241,232,0.8);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(247,241,232,0.5);
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    background: rgba(247,241,232,0.06);
+    border: 1px solid rgba(247,241,232,0.15);
+    color: var(--cream);
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--gold);
+  }
+
+  .form-group textarea {
+    height: 120px;
+    resize: vertical;
+  }
+
+  .form-group select option {
+    background: var(--ink);
+  }
+
+  .form-submit {
+    background: var(--gold);
+    color: var(--ink);
+    border: none;
+    padding: 1rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+
+  .form-submit:hover { background: var(--gold-deep); color: #fff; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0E0C08;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(232,184,75,0.15);
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(247,241,232,0.3);
+    letter-spacing: 0.06em;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgba(247,241,232,0.45);
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.5rem; }
+
+    #home { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 8rem 1.5rem 3rem; }
+    .hero-right {
+      aspect-ratio: 3 / 4;
+      max-height: 70vh;
+      height: auto;
+      min-height: 0;
+    }
+    .hero-stat-strip { position: static; flex-wrap: wrap; }
+    .hero-stat { flex: 1 1 50%; padding: 1.25rem 1.25rem; min-width: 0; }
+    .hero-stat:nth-child(2n) { border-right: none; }
+    .hero-stat:nth-child(-n+2) { border-bottom: 1px solid rgba(26,22,16,0.1); }
+    .hero-stat-num { font-size: 1.5rem; }
+    .hero-stat-label { font-size: 0.65rem; }
+
+    #about, #donate, #contact { grid-template-columns: 1fr; gap: 3rem; }
+    #programs { padding: 4rem 1.5rem; }
+    .programs-grid { grid-template-columns: 1fr; }
+    #about, #donate, #contact { padding: 4rem 1.5rem; }
+    .apply-band { flex-direction: column; padding: 3rem 1.5rem; }
+    .vision-band { padding: 4rem 1.5rem; }
+    footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+
+  /* ── iPHONE / SMALL PHONE ≤ 480px ── */
+  @media (max-width: 480px) {
+    nav { padding: 0.85rem 1rem; }
+    .nav-logo { font-size: 0.92rem; letter-spacing: 0.08em; }
+    .nav-links { gap: 0.9rem; }
+    .nav-links a { font-size: 0.7rem; letter-spacing: 0.08em; }
+    .nav-donate { padding: 0.5rem 0.95rem !important; }
+
+    .hero-left { padding: 6.5rem 1.25rem 2.25rem; }
+    .hero-title { font-size: clamp(2.6rem, 11vw, 3.2rem); }
+    .hero-subtitle { font-size: 0.95rem; }
+    .hero-actions { gap: 0.6rem; }
+    .btn-primary, .btn-outline { padding: 0.85rem 1.4rem; font-size: 0.72rem; }
+
+    .hero-stat { padding: 1rem 0.85rem; }
+    .hero-stat-num { font-size: 1.3rem; }
+    .hero-stat-label { font-size: 0.6rem; letter-spacing: 0.1em; }
+
+    #programs, #about, #donate, #contact { padding: 3.5rem 1.25rem; }
+    .program-card { padding: 1.75rem 1.25rem; }
+    .program-num { font-size: 2.4rem; }
+    .program-name { font-size: 1.3rem; }
+    .program-desc { font-size: 0.88rem; }
+
+    .vision-band { padding: 3.5rem 1.25rem; }
+    .vision-orb { width: 86vw; }
+    .vision-orb-halo { width: 110vw; }
+    .vision-text { font-size: 1.45rem; line-height: 1.4; }
+
+    .donate-amounts { gap: 0.4rem; flex-wrap: wrap; }
+    .donate-amt { padding: 0.7rem 1rem; font-size: 0.78rem; flex: 1 1 28%; min-width: 0; }
+    .impact-list { font-size: 0.85rem; }
+
+    .marquee-item { font-size: 0.82rem; }
+    footer { padding: 1.75rem 1.25rem; font-size: 0.78rem; }
+  }
+  /* ── ACTIVE EVENTS TEASER ── */
+  .events-teaser {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--ink);
+    min-height: 460px;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.25s;
+  }
+  .events-teaser:hover { opacity: 0.94; }
+
+  .events-teaser-visual {
+    position: relative;
+    overflow: hidden;
+    background: #221c12;
+    min-height: 360px;
+  }
+  .events-teaser-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+    transition: transform 0.6s ease;
+  }
+  .events-teaser:hover .events-teaser-visual img { transform: scale(1.04); }
+  .events-teaser-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #221c12 0%, #1a2010 100%);
+  }
+  .teaser-placeholder-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold);
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    opacity: 0.8;
+  }
+  .teaser-placeholder-sub {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(247,241,232,0.25);
+  }
+
+  .events-teaser-info {
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .teaser-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .teaser-eyebrow-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: blink-gold 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+  @keyframes blink-gold {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+  }
+  .teaser-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.1;
+  }
+  .teaser-title em { font-style: italic; color: var(--gold); }
+  .teaser-subtitle {
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(247,241,232,0.45);
+    margin-top: 0.5rem;
+  }
+  .teaser-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    border-top: 1px solid rgba(247,241,232,0.1);
+    padding-top: 1.5rem;
+  }
+  .teaser-meta-row {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.88rem;
+    align-items: baseline;
+  }
+  .teaser-meta-key {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(247,241,232,0.35);
+    min-width: 5rem;
+    flex-shrink: 0;
+    font-weight: 400;
+  }
+  .teaser-meta-val { color: rgba(247,241,232,0.8); }
+  .teaser-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--gold);
+    color: var(--ink);
+    padding: 0.9rem 2rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    width: fit-content;
+    transition: background 0.2s;
+  }
+  .events-teaser:hover .teaser-cta { background: var(--gold-deep); color: #fff; }
+  .teaser-cta-arrow { font-size: 1rem; }
+
+  @media (max-width: 900px) {
+    .events-teaser { grid-template-columns: 1fr; }
+    .events-teaser-visual { min-height: 280px; }
+    .events-teaser-info { padding: 2.5rem 1.5rem; }
+  }
+  @media (max-width: 480px) {
+    .events-teaser-info { padding: 2rem 1.25rem; }
+  }
+
+  /* ── DONATE MODAL ── */
+  .donate-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  .donate-modal.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .donate-modal[hidden] { display: none; }
+  .donate-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 22, 16, 0.55);
+    backdrop-filter: blur(4px);
+  }
+  .donate-modal-content {
+    position: relative;
+    background: var(--warm-white);
+    max-width: 480px;
+    width: 100%;
+    padding: 3rem 2.5rem 2.5rem;
+    border: 1px solid rgba(26,22,16,0.1);
+    box-shadow: 0 20px 60px rgba(26,22,16,0.18);
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .donate-modal.open .donate-modal-content { transform: translateY(0); }
+  .donate-modal-close {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    background: none;
+    border: none;
+    font-size: 1.65rem;
+    line-height: 1;
+    color: var(--ink-soft);
+    cursor: pointer;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+  }
+  .donate-modal-close:hover { color: var(--terra); }
+  .donate-modal-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 1.05;
+    margin: 0.4rem 0 1.1rem;
+    color: var(--ink);
+  }
+  .donate-modal-content h3 em {
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+  .donate-modal-intro {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 1.25rem;
+  }
+  .donate-notice {
+    background: rgba(232, 184, 75, 0.11);
+    border-left: 3px solid var(--gold-deep);
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 1.75rem;
+  }
+  .donate-notice-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-weight: 500;
+    margin-bottom: 0.45rem;
+  }
+  .donate-notice p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .payment-option {
+    display: block;
+    text-decoration: none;
+    background: var(--cream);
+    border: 1px solid rgba(26,22,16,0.12);
+    padding: 1.05rem 1.2rem;
+    color: var(--ink);
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    width: 100%;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  }
+  .payment-option:hover {
+    border-color: var(--gold-deep);
+    background: #fff;
+    transform: translateX(2px);
+  }
+  .payment-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .payment-method {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  .payment-handle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--ink);
+    font-weight: 400;
+    word-break: break-all;
+  }
+  .payment-arrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .donate-modal-footnote {
+    margin-top: 1.5rem;
+    font-size: 0.72rem;
+    line-height: 1.55;
+    color: var(--mid);
+    letter-spacing: 0.02em;
+  }
+  @media (max-width: 600px) {
+    .donate-modal { padding: 1rem; }
+    .donate-modal-content { padding: 2.5rem 1.4rem 1.6rem; }
+    .donate-modal-content h3 { font-size: 1.75rem; }
+    .payment-handle { font-size: 1.05rem; }
+  }
+
+  /* ── GALLERY FEATURE ── */
+  .gallery-feature {
+    padding: 5rem 2rem;
+    background: var(--cream);
+    text-align: center;
+    border-top: 1px solid rgba(26,22,16,0.08);
+  }
+  .gallery-feature-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .gallery-feature-frame {
+    max-width: 720px;
+    margin: 0 auto;
+    box-shadow: 0 16px 50px rgba(26,22,16,0.18);
+    background: var(--ink);
+  }
+  .gallery-feature-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .gallery-feature-caption {
+    margin: 1.75rem auto 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 520px;
+  }
+  @media (max-width: 700px) {
+    .gallery-feature { padding: 3.5rem 1.25rem; }
+    .gallery-feature-caption { font-size: 0.98rem; }
+  }
+  /* ── PROGRAM CARD IMAGE ── */
+  .program-image {
+    margin: 1.5rem 0 0.25rem;
+  }
+  .program-image-frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--ink);
+    overflow: hidden;
+  }
+  .program-image-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .program-image-caption {
+    display: block;
+    margin-top: 0.7rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">Lemonade <span>Arts</span> Foundation</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="/events/">Events</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#donate" class="nav-donate">Donate</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-left">
+    <div class="hero-eyebrow">St. Petersburg, Florida · Est. 2025</div>
+    <h1 class="hero-h1">
+      Art belongs<br>
+      to <em>everyone.</em>
+    </h1>
+    <p class="hero-sub">
+      Lemonade Arts Foundation cultivates creative community by building platforms, programming, and infrastructure that sustain independent artists and open culture to all.
+    </p>
+    <div class="hero-actions">
+      <a href="#programs" class="btn-primary">Our Programs</a>
+      <a href="#donate" class="btn-outline">Support Our Work</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <img src="images/hero.jpg" alt="An artist on scaffolding installs a sculptural arch inside a historical brick building with arched cathedral windows in St. Petersburg." fetchpriority="high" width="1200" height="1600" />
+    </div>
+  </div>
+
+  <div class="hero-stat-strip">
+    <div class="hero-stat">
+      <span class="hero-stat-num">20–30</span>
+      <span class="hero-stat-label">Artists per Market</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">Free</span>
+      <span class="hero-stat-label">Public Admission</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">Year-Round</span>
+      <span class="hero-stat-label">Community Programs</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">St. Pete</span>
+      <span class="hero-stat-label">Home Base</span>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">The Lemonade Stand Market <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Gallery Activations <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Immersive Installations <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Artist Development <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">St. Petersburg Cultural Center <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">The Lemonade Stand Market <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Gallery Activations <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Immersive Installations <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">Artist Development <span class="marquee-dot">✦</span></span>
+    <span class="marquee-item">St. Petersburg Cultural Center <span class="marquee-dot">✦</span></span>
+  </div>
+</div>
+
+
+<!-- ACTIVE EVENTS TEASER -->
+<a href="https://www.simpletix.com/e/artwalk-after-dark-the-laf-market-feat-j-r-tickets-276965" target="_blank" rel="noopener" class="events-teaser">
+  <div class="events-teaser-visual">
+    <img src="images/artwalk-after-dark.png"
+         alt="LAF Market — ArtWalk After Dark Feat. J Rose Loops, June 13th 7–11pm"
+         loading="lazy"
+         onerror="this.style.display='none'">
+    <div class="events-teaser-placeholder">
+      <p class="teaser-placeholder-title">ArtWalk<br>After Dark</p>
+      <p class="teaser-placeholder-sub">LAF Market · June 13th</p>
+    </div>
+  </div>
+  <div class="events-teaser-info">
+    <div>
+      <div class="teaser-eyebrow">
+        <span class="teaser-eyebrow-dot"></span>
+        Active Event
+      </div>
+    </div>
+    <div>
+      <h2 class="teaser-title">LAF Market<br><em>"ArtWalk After Dark"</em></h2>
+      <p class="teaser-subtitle">Feat. J Rose Loops</p>
+    </div>
+    <div class="teaser-meta">
+      <div class="teaser-meta-row">
+        <span class="teaser-meta-key">Date</span>
+        <span class="teaser-meta-val">June 13th, 2025</span>
+      </div>
+      <div class="teaser-meta-row">
+        <span class="teaser-meta-key">Time</span>
+        <span class="teaser-meta-val">7 – 11 PM</span>
+      </div>
+      <div class="teaser-meta-row">
+        <span class="teaser-meta-key">Location</span>
+        <span class="teaser-meta-val">2006 2nd Ave S, St. Pete (Trail Side)</span>
+      </div>
+      <div class="teaser-meta-row">
+        <span class="teaser-meta-key">Admission</span>
+        <span class="teaser-meta-val">Free · $10 suggested donation</span>
+      </div>
+    </div>
+    <div class="teaser-cta">
+      Get Tickets / Donate <span class="teaser-cta-arrow">→</span>
+    </div>
+  </div>
+</a>
+
+<!-- PROGRAMS -->
+<section id="programs">
+  <div class="section-header fade-up">
+    <div>
+      <div class="section-eyebrow">What We Do</div>
+      <h2 class="section-title">Our <em>Programs</em></h2>
+    </div>
+  </div>
+  <div class="programs-grid">
+    <div class="program-card fade-up">
+      <div class="program-num">01</div>
+      <h3 class="program-name">The Lemonade Stand Market</h3>
+      <p class="program-desc">A recurring curated arts and makers market providing 20–30 independent vendors with affordable booth space, public foot traffic, and a cultural context that elevates their work. Free to the public.</p>
+      <div class="program-image">
+        <div class="program-image-frame">
+          <img src="images/market.jpg" alt="Aerial view of the Lemonade Stand Market in downtown St. Petersburg — vendor tents, crowds, live music, and the city skyline beyond." loading="lazy" width="1100" height="825" />
+        </div>
+        <span class="program-image-caption">The Lemonade Stand Market — downtown St. Petersburg.</span>
+      </div>
+      <span class="program-tag">Recurring · Free Admission</span>
+    </div>
+    <div class="program-card fade-up">
+      <div class="program-num">02</div>
+      <h3 class="program-name">Gallery Activations</h3>
+      <p class="program-desc">Site-specific gallery programming featuring work across painting, sculpture, installation, digital media, and performance — designed to create genuine sales opportunities for exhibiting artists.</p>
+      <div class="program-image">
+        <div class="program-image-frame">
+          <img src="images/gallery.jpg" alt="Crowd at a Lemonade Arts gallery activation — projections, paintings, disco ball, and audience wearing illuminated silent-disco headphones." loading="lazy" width="1100" height="825" />
+        </div>
+        <span class="program-image-caption">Where art, music, and community converge.</span>
+      </div>
+      <span class="program-tag">Exhibitions · Sales</span>
+    </div>
+    <div class="program-card fade-up">
+      <div class="program-num">03</div>
+      <h3 class="program-name">Immersive Installations</h3>
+      <p class="program-desc">Large-scale experiential art that creates transformative public encounters with contemporary art — bridging fine art practice and accessibility for audiences beyond traditional gallery formats.</p>
+      <div class="program-image">
+        <div class="program-image-frame">
+          <img src="images/installation.jpg" alt="Sculptural melting-clock bench at the Dali Museum, designed by Kevin Brady, refurbished by Lemonade Arts Foundation." loading="lazy" width="1100" height="825" />
+        </div>
+        <span class="program-image-caption">Sculptural bench at the Dalí Museum by renowned artist Kevin Brady, refurbished by the LAF.</span>
+      </div>
+      <span class="program-tag">Public Art · Experiential</span>
+    </div>
+    <div class="program-card fade-up">
+      <div class="program-num">04</div>
+      <h3 class="program-name">Artist Development</h3>
+      <p class="program-desc">Workshops, mentorship, and resource-sharing initiatives supporting artists at all career stages with the business, technical, and creative knowledge needed to sustain professional practice.</p>
+      <div class="program-image">
+        <div class="program-image-frame">
+          <img src="images/development.jpg" alt="A painter working live on a large surrealist canvas at a Lemonade Arts gathering." loading="lazy" width="1100" height="825" />
+        </div>
+        <span class="program-image-caption">Live painting at a Lemonade Arts gathering.</span>
+      </div>
+      <span class="program-tag">Education · Mentorship</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-left fade-up">
+    <div class="about-quote-block">
+      <p class="about-quote">
+        Thriving creative communities do not happen by accident — they require sustained infrastructure, intentional programming, and organizational commitment to the artists who give culture its vitality.
+      </p>
+      <p class="about-quote-attr">— Lemonade Arts Foundation Mission</p>
+    </div>
+    <div class="about-accent-box">
+      <span>Building St. Petersburg's cultural future</span>
+    </div>
+  </div>
+  <div class="about-right fade-up">
+    <div class="section-eyebrow">Who We Are</div>
+    <h2 class="section-title" style="margin-bottom:1.5rem;">Rooted in <em>St. Pete.</em><br>Built for artists.</h2>
+    <p class="about-body">
+      Lemonade Arts Foundation exists at the intersection of <strong>art, community, and civic life.</strong> We operate recurring public markets, gallery programming, immersive installation experiences, and artist development initiatives serving the full spectrum of creative practitioners.
+    </p>
+    <p class="about-body">
+      Our long-term vision is a <strong>permanent cultural institution in downtown St. Petersburg</strong> — a museum and creative center that honors the city's artistic legacy and opens it to the world.
+    </p>
+  </div>
+</section>
+
+<!-- VISION BAND -->
+<div class="vision-band">
+  <div class="vision-orb" aria-hidden="true"></div>
+  <div class="vision-orb-halo" aria-hidden="true"></div>
+  <div class="vision-label">Our Vision</div>
+  <p class="vision-text">
+    We're building the St. Petersburg we want to live in — a city where artists can afford to stay, where neighbors run into culture they didn't go looking for, and where the people who make this place interesting aren't doing it alone.
+  </p>
+</div>
+
+<!-- DONATE -->
+<section id="donate">
+  <div class="donate-left fade-up">
+    <div class="section-eyebrow">Support the Work</div>
+    <h2>Help us build<br><em>something permanent.</em></h2>
+    <p>Your contribution directly funds artist stipends, free public programming, and the long-term infrastructure St. Petersburg's creative community deserves. Lemonade Arts Foundation is a Florida nonprofit corporation with 501(c)(3) status in progress — once granted, contributions will be tax-deductible to the fullest extent allowed by law.</p>
+    <div class="donate-amounts">
+      <button class="donate-amt">$25</button>
+      <button class="donate-amt active">$50</button>
+      <button class="donate-amt">$100</button>
+      <button class="donate-amt">$250</button>
+      <button class="donate-amt">$1K</button>
+    </div>
+    <div class="donate-cta">
+      <a href="#" class="btn-primary" id="donateOpen">Donate Now</a>
+      <a href="#" class="btn-outline">Become a Sponsor</a>
+    </div>
+  </div>
+  <div class="donate-right fade-up">
+    <div class="donate-right-title">Your Impact</div>
+    <ul class="impact-list">
+      <li class="impact-item">
+        <span class="impact-amt">$25</span>
+        <span class="impact-desc">General operating support — every contribution helps</span>
+      </li>
+      <li class="impact-item">
+        <span class="impact-amt">$50</span>
+        <span class="impact-desc">Sponsors one artist's booth at the Lemonade Stand Market</span>
+      </li>
+      <li class="impact-item">
+        <span class="impact-amt">$100</span>
+        <span class="impact-desc">Funds a presenter spot at a Lemonade Arts event</span>
+      </li>
+      <li class="impact-item">
+        <span class="impact-amt">$250</span>
+        <span class="impact-desc">Underwrites a workshop in our artist development program</span>
+      </li>
+      <li class="impact-item">
+        <span class="impact-amt">$1K</span>
+        <span class="impact-desc">Named sponsor of a gallery activation or immersive installation</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- APPLY BAND -->
+<div class="apply-band">
+  <div class="apply-text">
+    <h3>Are you an artist or maker?</h3>
+    <p>Applications are open for vendors, exhibitors, and workshop facilitators. We're building something real — and we want you in it.</p>
+  </div>
+  <a href="#contact" class="btn-primary">Apply to Participate</a>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-left fade-up">
+    <h2>Let's <em>connect.</em></h2>
+    <p>Whether you're an artist looking to participate, a sponsor interested in partnership, a press inquiry, or a community member who wants to get involved — we want to hear from you.</p>
+    <div class="contact-info">
+      <div class="contact-info-item">
+        <span class="contact-info-label">Location</span>
+        <span class="contact-info-value">St. Petersburg, Florida</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="contact-info-label">Email</span>
+        <span class="contact-info-value">hello@lemonadeartsfoundation.org</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="contact-info-label">Instagram</span>
+        <span class="contact-info-value">@lemonadearts</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="contact-info-label">Status</span>
+        <span class="contact-info-value">Florida Nonprofit Corporation · 501(c)(3) In Progress</span>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form fade-up">
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Last name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="your@email.com">
+    </div>
+    <div class="form-group">
+      <label>I am reaching out as a...</label>
+      <select>
+        <option value="">Select one</option>
+        <option>Artist / Maker / Vendor</option>
+        <option>Sponsor / Partner</option>
+        <option>Community Member</option>
+        <option>Press / Media</option>
+        <option>Grant Organization</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea placeholder="Tell us about yourself and how you'd like to get involved..."></textarea>
+    </div>
+    <button class="form-submit">Send Message</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Lemonade <span>Arts</span> Foundation</div>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="/events/">Events</a></li>
+    <li><a href="#donate">Donate</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <span class="footer-copy">© 2025 Lemonade Arts Foundation, Inc. · St. Petersburg, FL</span>
+</footer>
+
+<!-- DONATE MODAL -->
+<div class="donate-modal" id="donateModal" role="dialog" aria-modal="true" aria-labelledby="donateModalTitle" hidden>
+  <div class="donate-modal-overlay"></div>
+  <div class="donate-modal-content">
+    <button class="donate-modal-close" id="donateClose" aria-label="Close donation options">×</button>
+    <div class="section-eyebrow">Direct Contribution</div>
+    <h3 id="donateModalTitle">Choose your <em>method</em></h3>
+    <p class="donate-modal-intro">Send any amount through one of the methods below.</p>
+    <div class="donate-notice">
+      <div class="donate-notice-label">A Note on Tax Status</div>
+      <p>Until our 501(c)(3) determination is granted, contributions made here are not yet tax-deductible. They go directly toward sustaining the gallery — exhibitions, programming, and the artists who make this space possible.</p>
+    </div>
+    <div class="payment-options">
+      <a href="https://venmo.com/devin-constant" target="_blank" rel="noopener noreferrer" class="payment-option">
+        <div class="payment-row">
+          <div>
+            <div class="payment-method">Venmo</div>
+            <div class="payment-handle">@devin-constant</div>
+          </div>
+          <div class="payment-arrow">Open ↗</div>
+        </div>
+      </a>
+      <a href="https://cash.app/$devinconstantly" target="_blank" rel="noopener noreferrer" class="payment-option">
+        <div class="payment-row">
+          <div>
+            <div class="payment-method">Cash App</div>
+            <div class="payment-handle">$devinconstantly</div>
+          </div>
+          <div class="payment-arrow">Open ↗</div>
+        </div>
+      </a>
+      <button type="button" class="payment-option" id="zelleCopy" data-handle="info@harmonicgraffiti.com">
+        <div class="payment-row">
+          <div>
+            <div class="payment-method">Zelle</div>
+            <div class="payment-handle">info@harmonicgraffiti.com</div>
+          </div>
+          <div class="payment-arrow" id="zelleArrow">Tap to copy</div>
+        </div>
+      </button>
+    </div>
+    <p class="donate-modal-footnote">Lemonade Arts Foundation is a Florida nonprofit corporation with 501(c)(3) status in progress.</p>
+  </div>
+</div>
+
+<script>
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Donate amount toggle
+  document.querySelectorAll('.donate-amt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.donate-amt').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 60) {
+      nav.style.boxShadow = '0 2px 20px rgba(26,22,16,0.08)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // Donate modal
+  const donateModal = document.getElementById('donateModal');
+  const donateOpen = document.getElementById('donateOpen');
+  const donateClose = document.getElementById('donateClose');
+  const donateOverlay = donateModal ? donateModal.querySelector('.donate-modal-overlay') : null;
+
+  function openDonateModal(e) {
+    if (e) e.preventDefault();
+    if (!donateModal) return;
+    donateModal.hidden = false;
+    requestAnimationFrame(() => donateModal.classList.add('open'));
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDonateModal() {
+    if (!donateModal) return;
+    donateModal.classList.remove('open');
+    setTimeout(() => {
+      donateModal.hidden = true;
+      document.body.style.overflow = '';
+    }, 250);
+  }
+
+  if (donateOpen) donateOpen.addEventListener('click', openDonateModal);
+  if (donateClose) donateClose.addEventListener('click', closeDonateModal);
+  if (donateOverlay) donateOverlay.addEventListener('click', closeDonateModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && donateModal && !donateModal.hidden) closeDonateModal();
+  });
+
+  // Zelle copy-to-clipboard
+  const zelleCopy = document.getElementById('zelleCopy');
+  const zelleArrow = document.getElementById('zelleArrow');
+  if (zelleCopy && zelleArrow) {
+    zelleCopy.addEventListener('click', async () => {
+      const handle = zelleCopy.dataset.handle;
+      const showCopied = () => {
+        zelleArrow.textContent = 'Copied ✓';
+        setTimeout(() => { zelleArrow.textContent = 'Tap to copy'; }, 1800);
+      };
+      try {
+        await navigator.clipboard.writeText(handle);
+        showCopied();
+      } catch (err) {
+        const ta = document.createElement('textarea');
+        ta.value = handle;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); showCopied(); } catch {}
+        document.body.removeChild(ta);
+      }
+    });
+  }
+</script>
+</body>
+</html>
